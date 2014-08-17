@@ -13,7 +13,8 @@ var mainState = {
 
     update: function() {
         var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-        spaceKey.onDown.add((function (){ this.circle.body.position.x++; }), this);
+        var that = this;
+        spaceKey.onDown.add((function (){ that.circle.body.position.x++; }), this);
     },
 };
 
