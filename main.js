@@ -12,7 +12,7 @@ var mainState = {
     },
 
     update: function() {
-        
+        this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR).onDown.add({ circle.body.position.x++ }, this);
     },
 };
 
