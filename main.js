@@ -9,12 +9,13 @@ var mainState = {
 
     create: function() {
         this.circle = this.game.add.sprite(64, 64, 'circle');
+        var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+        spaceKey.onDown.add((function (){ mainState.circle.position.x+=5; }), this);
     },
 
     update: function() {
-        var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+
         var that = this;
-        spaceKey.onDown.add((function (){ mainState.circle.position.x++; }), this);
     },
 };
 
