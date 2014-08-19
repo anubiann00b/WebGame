@@ -1,4 +1,4 @@
-var game = new Phaser.Game(400, 490, Phaser.AUTO, 'gameDiv');
+var game = new Phaser.Game(600, 480, Phaser.AUTO, 'gameDiv');
 
 var mainState = {
 
@@ -9,8 +9,7 @@ var mainState = {
 
     create: function() {
         this.circle = this.game.add.sprite(64, 64, 'circle');
-        var spaceKey = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-        spaceKey.onDown.add((function (){ mainState.circle.position.x+=5; }), this);
+        this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR).onDown.add((function (){ mainState.circle.position.x+=5; }), this);
     },
 
     update: function() {
