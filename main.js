@@ -9,11 +9,13 @@ var mainState = {
 
     create: function() {
         this.circle = this.game.add.sprite(64, 64, 'circle');
-        this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR).onDown.add((function (){ mainState.circle.position.x+=5; }), this);
+        this.game.input.keyboard.addKey(Phaser.Keyboard.UP).onDown.add((function (){ mainState.circle.position.y-=25; }), this);
+        this.game.input.keyboard.addKey(Phaser.Keyboard.DOWN).onDown.add((function (){ mainState.circle.position.y+=25; }), this);
+        this.game.input.keyboard.addKey(Phaser.Keyboard.LEFT).onDown.add((function (){ mainState.circle.position.x-=25; }), this);
+        this.game.input.keyboard.addKey(Phaser.Keyboard.RIGHT).onDown.add((function (){ mainState.circle.position.x+=25; }), this);
     },
 
     update: function() {
-
         var that = this;
     },
 };
