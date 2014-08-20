@@ -1,1 +1,8 @@
-/sublime-text
+*~
+*.hi
+*.o
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+.DS_STORE
+dist/*
+pres/*
